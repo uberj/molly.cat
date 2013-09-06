@@ -1,0 +1,11 @@
+push
+*.swp
+*.swo
+*.swm
+*.swn
+output
+*.pyc
+.sass-cache
+gallery
+newest-wok
+settings/local.py

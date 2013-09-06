@@ -1,0 +1,12 @@
+title: "Growing Up"
+slug: youth
+category: gallery
+type: album
+source: imgur
+album-id: npfe3
+
+datetime: 2013-09-06 00:00:01
+
+---
+
+Test

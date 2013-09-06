@@ -1,0 +1,324 @@
+@import "globals.scss";
+
+
+html, body {
+    font-family: Georgia, Palatino, 'Palatino Linotype', Times,
+                 'Times New Roman', "Hiragino Sans GB", "STXihei",
+                 serif;
+    height: 100%;
+    margin: 4px 0 0;
+    text-align: justify;
+    background: url("/css/img/grey.png") repeat scroll 0 0 transparent;
+}
+
+#wrap {
+    @include box-shadow(0 1px 2px $light-gray);
+    border-radius: 3px;
+    margin: 0 auto;
+    padding: 4px 3% 0;
+    width: 940px;
+}
+
+@media all and (min-width: 62.5em) {
+    #wrap {
+        padding: 4px 2% 0;
+    }
+}
+
+h1, h2, h3, h4, h5, #logo {
+    color: $black;
+    margin: 0;
+}
+
+h1, #logo {
+    font-family: 'Gentium Book Basic', serif;
+}
+
+h2, h3, h4, h5 {
+    font-weight: normal;
+}
+
+h2 {
+    font-size: 22px;
+}
+
+a, .main a:hover {
+    @include transition(color .2s);
+    font-weight: bold;
+}
+
+span p a {
+    font-weight: normal;
+}
+
+strong {
+    color: $gray;
+}
+
+hr {
+    border-color: rgb(220, 220, 220);
+}
+
+.main pre span {
+    font-family: monospace;
+    font-size: 14px;
+    line-height: 24px;
+}
+code {
+    background: darken($white, 3%);
+    border: 1px solid $light-gray;
+    border-radius: 1px;
+    font-family: monospace;
+    font-size: 14px;
+    padding: 0 4px;
+}
+
+.main {
+    padding-bottom: 350px;
+    .header-group {
+        margin-bottom: 26px;
+        h1, h2 {
+            color: $dark-green;
+        }
+        h1 {
+            margin-bottom: 0;
+        }
+    }
+    p, span {
+        color: lighten($black, 2%);
+        font-size: 16px;
+        line-height: 34px;
+        margin: 0;
+    }
+    li, ol {
+        color: lighten($black, 5%);
+        font-size: 16px;
+        line-height: 34px;
+    }
+    a {
+        color: $dark-green;
+        font-weight: bold;
+        text-decoration: none;
+        &:hover {
+          color: $light-green;
+        }
+    }
+    hr {
+        margin-bottom: 13px;
+    }
+}
+
+
+#header {
+    height: 78px;
+    position: relative;
+    margin-bottom: 39px;
+    hr {
+        margin-bottom: 6px;
+        margin-top: 12px;
+    }
+}
+
+.logos {
+    position: absolute;
+    left: 0;
+    top: 10px;
+    #logo {
+        font-size: 36px;
+        font-weight: bold;
+        a {
+            color: $dark-green;
+            text-decoration: none;
+            &:hover {
+              color: $light-green;
+            }
+        }
+        .social {
+            margin-left: 2px;
+            a {
+                color: $light-gray;
+                margin: 0 2px;
+                &:hover {
+                    color: $gray;
+                }
+            }
+            i {
+                font-size: 23px;
+            }
+        }
+    }
+
+    #sublogo {
+        color: $gray;
+        font-size: 14px;
+    }
+}
+
+#navigation {
+    position: absolute;
+    font: 16px 'Gentium Book Basic', serif;
+    right: 0;
+    top: 20px;
+    a {
+        color: $dark-gray;
+        margin-left: 26px;
+        text-decoration: none;
+        position: relative;
+        vertical-align: middle;
+        top: 0;
+        @include transition(top .3s);
+        &:hover {
+            top: 13px;
+        }
+    }
+    span {
+        background: none;
+        border-radius: 8px;
+        padding: 64px 16px 16px 16px;
+        @include transition(background .4s);
+    }
+    hr {
+        clear: both;
+    }
+}
+
+span.metadata {
+    color: $gray;
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 6px;
+    position: relative;
+    top: 6px;
+}
+
+.base-image {
+    img {
+        @include def-box-shadow();
+        max-height: 480px;
+        max-width: 100%;
+        margin: 0 auto 52px auto;
+    }
+    span {
+        font-size: 13px;
+        font-style: italic;
+    }
+}
+
+.pagination {
+    font-size: 14px;
+    margin-bottom: 39px;
+}
+
+#sliding-all a {
+    color: $black;
+    font-weight: normal;
+}
+#sliding-next-page, #sliding-prev-page {
+    @include transition(background .5s);
+    &:not(disabled) {
+        background: $light-gray;
+        &:hover {
+            background: $green;
+        }
+    }
+    &[disabled='disabled'] {
+        background: $green;
+        cursor: default;
+    }
+}
+.sliding-index {
+    min-height: 1250px;
+}
+
+a.btn {
+    background: $green;
+    border-radius: 3px;
+    bottom: 0;
+    color: $white;
+    font-weight: normal;
+    margin-right: 5px;
+    padding: 3px 8px;
+    text-decoration: none;
+    @include transition(background .5s .1s);
+    &:hover {
+        background: lighten($green, 5%);
+        font-weight: normal;
+        color: $white;
+        cursor: pointer;
+    }
+    &:active {
+        background: darken($green, 10%);
+        @include transition(background .03s 0s);
+    }
+}
+
+ #footer {
+    /* Overrides sticky-footer */
+    font-size: 14px;
+    line-height: 28px;
+    height: 115px;
+    margin-top: -100px;
+    min-width: 100%;
+    padding-top: 26px;
+    text-align: center;
+    a {
+        color: $dark-green;
+        text-decoration: none;
+        &:hover {
+          color: $light-green;
+        }
+    }
+    .social {
+        margin-left: 6px;
+        position: relative;
+        top: 1px;
+        a {
+            margin-right: 4px;
+        }
+        i {
+            font-size: 16px;
+        }
+    }
+}
+
+
+.c:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+}
+
+.c {
+    display: inline-block;
+}
+
+html[xmlns] .c {
+    display: block;
+}
+
+* html .c {
+    height: 1%;
+}
+
+/* Social share buttons */
+.addthis_button_tweet {
+    position: relative;
+    right: 10px;
+}
+#top-share {
+    position: relative;
+    top: 19px;
+    right: 2px;
+}
+#bottom-share {
+    position: relative;
+    margin-top: 39px;
+    right: 2px;
+}
+#disqus_thread {
+    margin-top: 13px;
+}

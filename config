@@ -1,0 +1,2 @@
+site_title: Molly Cat
+url_pattern: "/{category}/{slug}/{page}/"

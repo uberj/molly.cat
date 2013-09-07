@@ -31,7 +31,7 @@ h1, h2, h3, h4, h5, #logo {
 }
 
 h1, #logo {
-    font-family: 'Gentium Book Basic', serif;
+    font-family: 'Istok Web', sans-serif;
 }
 
 h2, h3, h4, h5 {
@@ -156,12 +156,12 @@ code {
 
 #navigation {
     position: absolute;
-    font: 16px 'Gentium Book Basic', serif;
+    font-family: 16px 'Cinzel', serif;
     right: 0;
     top: 20px;
     a {
         color: $dark-gray;
-        margin-left: 26px;
+        margin-left: 10px;
         text-decoration: none;
         position: relative;
         vertical-align: middle;

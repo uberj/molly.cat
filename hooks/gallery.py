@@ -11,18 +11,18 @@ pp = pprint.PrettyPrinter(indent=4)
 
 GALLERY_DIR = os.path.abspath('./media/img/gallery/') + '/'
 REL_GALLERY_DIR = '/img/gallery/'
-FILE_TYPES = ['jpg', 'JPG', 'jpeg', 'JPEG', 'png', 'PNG']
+FILE_TYPES = ['jpg', 'JPG', 'jpeg', 'JPEG', 'png', 'PNG', 'gif', 'GIF']
 THUMB_PREFIX = 'THUMB_'
 PREVIEW_IMGS_NUM = 3
 
 imgur_headers = {'Authorization': 'Client-ID {0}'.format(client_ID)}
 ALBUM_URL = "https://api.imgur.com/3/album/{0}/"
-ALBUM_CACHE = None
+ALBUM_CACHE = {}
 
 TS = 'm'  # THUMB_SIZE_LETTER  (see http://api.imgur.com/models/image)
 
-MAX_WIDTH = 300
-MAX_HEIGHT = 500
+MAX_WIDTH = 400
+MAX_HEIGHT = 600
 
 
 class Gallery(object):
@@ -37,12 +37,12 @@ class Gallery(object):
 
     def get_imgur_album(self, album_id):
         global ALBUM_CACHE
-        if not ALBUM_CACHE:
+        if album_id not in ALBUM_CACHE:
             response = requests.get(
                 ALBUM_URL.format(album_id), headers=imgur_headers
             )
-            ALBUM_CACHE = json.loads(response.content)
-        return ALBUM_CACHE
+            ALBUM_CACHE[album_id] = json.loads(response.content)
+        return ALBUM_CACHE[album_id]
 
     def calc_thumb_xy(self, *args):
         def refactor(*args):
@@ -100,6 +100,7 @@ class Gallery(object):
                 pp.pprint(page.meta)
                 # bind to template via json
                 images = self.get_imgur_album_images(page)
+                self.albums[album['slug']] = images
             else:
                 # get paths of all of the images in the album
                 srcs = []
@@ -135,7 +136,7 @@ class Gallery(object):
                         'width': width,
                         'height': height,
                     })
-            self.albums[album['slug']] = images
+                self.albums[album['slug']] = images
 
     def set_images(self, ctx, page, template_vars):
         album = page.meta
@@ -164,4 +165,3 @@ class Gallery(object):
                 image_list += images[:PREVIEW_IMGS_NUM]
                 albums[album_page['slug']] = image_list
             templ_vars['site']['albums'] = albums
-            return

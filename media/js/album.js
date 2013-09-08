@@ -344,14 +344,18 @@ window.AlbumView = Backbone.View.extend({
     },
 
     scaleImage: function (width, height) {
-        var viewHeight = $(window).height();
-        var viewWidth = $(window).width();
+        // We need to make the maxHeight less than the viewHeight (see centerShownImage).
+        // This is because viewHeight might shrink the image's height without shrinking
+        // the image's width. The same thing is true for maxWidth and viewWidth.
+        // These numbers seem to be magic.
+        var maxHeight = $(window).height() * 0.7;
+        var maxWidth = $(window).width() * 0.7;
         function refactor(width, height) {
             return [width * 0.9, height * 0.9];
         }
 
         function within_max(width, height) {
-            if (width > viewWidth && height > viewHeight) {
+            if (width > maxWidth || height > maxHeight) {
                 return false;
             } else {
                 return true;

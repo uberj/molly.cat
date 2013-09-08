@@ -5,7 +5,7 @@ import requests
 import pprint
 import Image
 
-from settings import client_ID
+from settings import imgur_client_ID
 
 pp = pprint.PrettyPrinter(indent=4)
 
@@ -15,7 +15,7 @@ FILE_TYPES = ['jpg', 'JPG', 'jpeg', 'JPEG', 'png', 'PNG', 'gif', 'GIF']
 THUMB_PREFIX = 'THUMB_'
 PREVIEW_IMGS_NUM = 3
 
-imgur_headers = {'Authorization': 'Client-ID {0}'.format(client_ID)}
+imgur_headers = {'Authorization': 'Client-ID {0}'.format(imgur_client_ID)}
 ALBUM_URL = "https://api.imgur.com/3/album/{0}/"
 ALBUM_CACHE = {}
 

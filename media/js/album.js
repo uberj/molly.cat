@@ -351,9 +351,7 @@ window.AlbumView = Backbone.View.extend({
         }
 
         function within_max(width, height) {
-            if (width > viewWidth) {
-                return false;
-            } else if (height > viewHeight) {
+            if (width > viewWidth && height > viewHeight) {
                 return false;
             } else {
                 return true;

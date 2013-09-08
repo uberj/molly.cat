@@ -6,6 +6,5 @@ push
 output
 *.pyc
 .sass-cache
-gallery
 newest-wok
 settings/local.py

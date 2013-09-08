@@ -79,7 +79,12 @@ class Gallery(object):
             raise Exception("No album id for {0}".format(page.meta['title']))
         return map(
             self.make_image,
-            self.get_imgur_album(page.meta['album-id'])['data']['images']
+            sorted(
+                self.get_imgur_album(page.meta['album-id'])['data']['images'],
+                key=lambda img: img['datetime'],
+                reverse=True
+            )
+
         )
 
     def calc_img_hw(self, path):
@@ -153,7 +158,7 @@ class Gallery(object):
         if 'type' in page.meta and page.meta['type'] == 'index':
             album_pages = sorted(
                 templ_vars['site']['categories']['gallery'],
-                key=lambda album: album['datetime']
+                key=lambda album: album['datetime'],
             )
             albums = {}
             for album_page in album_pages:

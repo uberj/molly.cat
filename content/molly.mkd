@@ -10,30 +10,14 @@ image:
 
 ---
 
-Molly is a cat.  Molly is a cat. Molly is a cat.  Molly is a cat. Molly is a cat.  Molly is a cat.
-Molly is a cat.  Molly is a cat. Molly is a cat.  Molly is a cat. Molly is a cat.  Molly is a cat.
-Molly is a cat.  Molly is a cat. Molly is a cat.  Molly is a cat. Molly is a cat.  Molly is a cat.
-Molly is a cat.  Molly is a cat. Molly is a cat.  Molly is a cat. Molly is a cat.  Molly is a cat.
-Molly is a cat.  Molly is a cat. Molly is a cat.  Molly is a cat. Molly is a cat.  Molly is a cat.
-Molly is a cat.  Molly is a cat. Molly is a cat.  Molly is a cat. Molly is a cat.  Molly is a cat.
-Molly is a cat.
+Molly is a [cat][snowshoe]. She lives with her two people in Portland, OR in a small studio on a trendy city street.  She does not have much of a view.  Her shitty apartment faces another shitty apartment, so sometimes she watches NFL on the neighbors' TV; sometimes it's even MTV!
 
-Molly is a cat.  Molly is a cat. Molly is a cat.  Molly is a cat. Molly is a cat.  Molly is a cat.
-Molly is a cat.  Molly is a cat. Molly is a cat.  Molly is a cat. Molly is a cat.  Molly is a cat.
-Molly is a cat.  Molly is a cat. Molly is a cat.  Molly is a cat. Molly is a cat.  Molly is a cat.
-Molly is a cat.  Molly is a cat. Molly is a cat.  Molly is a cat. Molly is a cat.  Molly is a cat.
-Molly is a cat.  Molly is a cat. Molly is a cat.  Molly is a cat. Molly is a cat.  Molly is a cat.
-Molly is a cat.  Molly is a cat. Molly is a cat.  Molly is a cat. Molly is a cat.  Molly is a cat.
+Molly was born and raised in the quaint college town of Corvallis, OR where she spent much of her childhood partaking in normal cat activities such as: playing fetch with her favorite toys, biting ankles, reaching her paws under bathroom doors while dad poops, chasing flies around the kitchen, knocking shit off any flat elevated surface, singing the song of her people in a raspy voice (due to her vocal cords being damaged as a kitten), and being an affectionate snuggle-muffin as suits her mood.  She also has a strange affinity for licking dad's arm-hair when he comes home from the outside world smelling weird and dirty.  She smells like a small mammal, which is good.
 
+Molly eats Indigo Blue Solid Gold all natural cat food, supplemented by her favorite goddamn treats in the world -- chicken flavored Greenies.  She also loves granola, scrambled eggs, and crinkly plastic objects which have luckily not killed her yet.
 
-Molly is a cat.  Molly is a cat. Molly is a cat.  Molly is a cat. Molly is a cat.  Molly is a cat.
-Molly is a cat.  Molly is a cat. Molly is a cat.  Molly is a cat. Molly is a cat.  Molly is a cat.
-Molly is a cat.  Molly is a cat. Molly is a cat.  Molly is a cat. Molly is a cat.  Molly is a cat.
-Molly is a cat.  Molly is a cat. Molly is a cat.  Molly is a cat. Molly is a cat.  Molly is a cat.
-Molly is a cat.  Molly is a cat. Molly is a cat.  Molly is a cat. Molly is a cat.  Molly is a cat.
-Molly is a cat.  Molly is a cat. Molly is a cat.  Molly is a cat. Molly is a cat.  Molly is a cat.
-Molly is a cat.  Molly is a cat. Molly is a cat.  Molly is a cat. Molly is a cat.  Molly is a cat.
-Molly is a cat.  Molly is a cat. Molly is a cat.  Molly is a cat. Molly is a cat.  Molly is a cat.
-Molly is a cat.  Molly is a cat. Molly is a cat.  Molly is a cat. Molly is a cat.  Molly is a cat.
-Molly is a cat.  Molly is a cat. Molly is a cat.  Molly is a cat. Molly is a cat.  Molly is a cat.
-Molly is a cat.  Molly is a cat. Molly is a cat.  Molly is a cat. 
+If Molly were a human, she would have the physique of an exotic-looking Amazonian warrior princess.    She will bound great heights into the air in order to catch her favorite "da-bird" toy.  She has a cat tree that she likes to bounce off of, Spiderman style.  Molly is long, sleek and slender, curious and playful -- like a river otter! She is very talented at opening all the cupboard doors, burrowing under piles of blankets, and using her spidey senses to track invisible insects flying around her apartment.  However, in typical honey badger fashion, Molly doesn't give too many fucks about the fish that her people bought specifically for her entertainment.
+
+Molly's people love her very much.  Since graduating from college, her dad has had much time on his hands and has dedicated it to creating this site just for her.
+
+[snowshoe]:http://en.wikipedia.org/wiki/Snowshoe_%28cat%29

@@ -5,9 +5,12 @@ import requests
 import pprint
 import Image
 
-from settings import imgur_client_ID
+from settings import  imgur_client_ID, flickr_client_ID
+from lib import flickr
 
 pp = pprint.PrettyPrinter(indent=4)
+
+flickr.API_KEY = flickr_client_ID
 
 GALLERY_DIR = os.path.abspath('./media/img/gallery/') + '/'
 REL_GALLERY_DIR = '/img/gallery/'
@@ -60,7 +63,7 @@ class Gallery(object):
 
         return args
 
-    def make_image(self, image):
+    def make_imgur_image(self, image):
         width = image['width']
         height = image['height']
         thumb_width, thumb_height = self.calc_thumb_xy(width, height)
@@ -78,7 +81,7 @@ class Gallery(object):
         if 'album-id' not in page.meta:
             raise Exception("No album id for {0}".format(page.meta['title']))
         return map(
-            self.make_image,
+            self.make_imgur_image,
             sorted(
                 self.get_imgur_album(page.meta['album-id'])['data']['images'],
                 key=lambda img: img['datetime'],
@@ -86,6 +89,29 @@ class Gallery(object):
             )
 
         )
+
+    def get_flickr_set(self, set_id):
+        images = []
+        photoset = flickr.Photoset(set_id)
+        for photo in photoset.getPhotos():
+            sizes = photo.getSizes()
+            image = {}
+            for size in sizes:
+                if size['label'] == 'Small':
+                    image['thumb_src'] = size['source']
+                    image['thumb_width'] = int(size['width'] * 1.20)
+                    image['thumb_height'] = int(size['height'] * 1.20)
+                if size['label'] == 'Large 1600':
+                    image['src'] = size['source']
+                    image['width'] = size['width']
+                    image['height'] = size['height']
+            images.append(image)
+        return images
+
+    def get_flickr_album_images(self, page):
+        if 'album-id' not in page.meta:
+            raise Exception("No album id for {0}".format(page.meta['title']))
+        return self.get_flickr_set(page.meta['album-id'])
 
     def calc_img_hw(self, path):
         image = Image.open(path.replace(REL_GALLERY_DIR, GALLERY_DIR))
@@ -98,6 +124,7 @@ class Gallery(object):
         Binds srcs and thumb_srcs to template
         """
         is_imgur = 'source' in page.meta and page.meta['source'] == 'imgur'
+        is_flickr = 'source' in page.meta and page.meta['source'] == 'flickr'
         if 'type' in page.meta and page.meta['type'] == 'album':
             album = page.meta
             images = []
@@ -105,6 +132,9 @@ class Gallery(object):
                 pp.pprint(page.meta)
                 # bind to template via json
                 images = self.get_imgur_album_images(page)
+                self.albums[album['slug']] = images
+            elif is_flickr:
+                images = self.get_flickr_album_images(page)
                 self.albums[album['slug']] = images
             else:
                 # get paths of all of the images in the album

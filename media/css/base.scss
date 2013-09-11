@@ -2,9 +2,7 @@
 
 
 html, body {
-    font-family: Georgia, Palatino, 'Palatino Linotype', Times,
-                 'Times New Roman', "Hiragino Sans GB", "STXihei",
-                 serif;
+    font-family: 16px 'Cinzel', serif;
     height: 100%;
     margin: 4px 0 0;
     text-align: justify;
@@ -87,8 +85,9 @@ code {
     p, span {
         color: lighten($black, 2%);
         font-size: 16px;
-        line-height: 34px;
+        line-height: 24px;
         margin: 0;
+        margin-bottom: 15px;
     }
     li, ol {
         color: lighten($black, 5%);

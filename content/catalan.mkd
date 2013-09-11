@@ -1,0 +1,18 @@
+title: About Molly (In Catalan)
+slug: catalan-molly
+
+image:
+    url: http://i.imgur.com/cAQZn2a.jpg
+    where: left
+
+---
+
+<p>Molly és un cat raquetes . Viu amb els seus dos persones a Portland en un petit estudi en un carrer de moda de la ciutat . Ella no té molt a veure . El seu apartament de merda s'enfronta a un altre apartament de merda , així que de vegades s'observa NFL a la televisió dels veïns , de vegades és fins i tot MTV !</p>
+
+<p>Molly va néixer i es va criar a la pintoresca ciutat universitària de Corvallis , Oregon , on va passar gran part de la seva infància participant en les activitats de gat normals com : jugar buscar amb les seves joguines favorits, mossegant els turmells , aconseguint les seves potes sota les portes del bany mentre fa caca pare , perseguint mosques al voltant de la cuina , tirant merda qualsevol superfície plana elevada , cantant la cançó del seu poble en una veu ronca (a causa de les seves cordes vocals estan danyats com gat ) , i ser una afectuosa arraulir - magdalena com s'adapti al seu estat d'ànim . Ella també té una estranya afinitat llepant braç de pèl de pare quan arriba a casa del món exterior amb olor estrany i brut . Ella fa olor com un petit mamífer , que és bo .</p>
+
+<p>Molly menja Indigo Blue Solid Gold tot el menjar per a gats natural , complementada per les seves delícies maleïts favorits en el món - amb gust de pollastre Greenies . També li encanta granola , ous remenats , i els objectes de plàstic arrugada que afortunadament no han matat a ella encara .</p>
+
+<p>Si Molly era un ésser humà , tindria la constitució d'un aspecte exòtic amazònica princesa guerrera . Ella va unida una gran alçada en l'aire per tal de recuperar la joguina favorit " dóna - ocell " . Ella té un gat de l'arbre que li agrada rebotar , estil Spiderman . Molly és llarg , llis i prim , curiós i juganer - com una llúdria de riu ! Ella és molt talentosa en l'obertura de totes les portes dels armaris , cau sota munts de mantes , i l'ús dels seus sentits Spidey per rastrejar insectes invisibles que volen al voltant del seu apartament . No obstant això , en el típic teixó moda , Molly no dóna massa folla sobre el peix que les seves persones van comprar específicament per al seu entreteniment .</p>
+
+<p>Persones de Molly estimen molt. Des que es va graduar de la universitat , el seu pare ha tingut molt temps a les mans i l'ha dedicat a la creació d'aquest lloc només per a ella .</p>

@@ -38,7 +38,7 @@ class Gallery(object):
     def __init__(self):
         self.albums = {}
 
-    def get_albums(self, page, templ_vars):
+    def get_albums(self, ctx, page, templ_vars):
         """
         Wok page.template.pre hook
         Load several preview images into each album.
@@ -59,7 +59,7 @@ class Gallery(object):
                 albums[album_page['slug']] = image_list
             templ_vars['site']['albums'] = albums
 
-    def get_images(self, page):
+    def get_images(self, ctx, page):
         """
         Wok page.template.pre hook
         Get all images in the album as relative paths.
@@ -77,9 +77,9 @@ class Gallery(object):
                 Klass = Imgur
             elif is_flickr:
                 Klass = Flickr
-            self.albums[album['slug']] = Klass().get_images(page)
+            self.albums[album['slug']] = Klass().get_images(ctx, page)
 
-    def set_images(self, page, templ_vars):
+    def set_images(self, ctx, page, templ_vars):
         """
         Wok page.template.pre hook
         Inserts a single JSON blob containing all images into the page.
@@ -94,7 +94,7 @@ class Gallery(object):
 class Local(object):
     """Filesystem images."""
 
-    def get_images(self, page):
+    def get_images(self, ctx, page):
         """Get paths of all of the images in the album."""
         album = page.meta
         srcs = []
@@ -136,7 +136,7 @@ class Local(object):
 class Imgur(object):
     """Imgur-hosted images."""
 
-    def get_images(self, page):
+    def get_images(self, ctx, page):
         if 'album-id' not in page.meta:
             raise Exception('No Imgur album-id for {0}'
                             .format(page.meta['title']))
@@ -162,7 +162,7 @@ class Imgur(object):
 class Flickr(object):
     """Flickr-hosted images."""
 
-    def get_images(self, page):
+    def get_images(self, ctx, page):
         if 'album-id' not in page.meta:
             raise Exception('No Flickr album-id for {0}'
                             .format(page.meta['title']))

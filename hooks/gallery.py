@@ -55,7 +55,8 @@ class Gallery(object):
                     lambda i: i['thumb_src'],
                     self.albums[album_page['slug']]
                 )
-                image_list += images[:PREVIEW_IMGS_NUM]
+                # I don't like the first default image
+                image_list += images[1: 1 + PREVIEW_IMGS_NUM]
                 albums[album_page['slug']] = image_list
             templ_vars['site']['albums'] = albums
 

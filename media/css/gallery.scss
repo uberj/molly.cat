@@ -9,6 +9,7 @@
     }
     a {
         @include def-box-shadow();
+        background: url("../img/textures/accent.png") repeat scroll 0 0 transparent;
         border: 7px double $light-gray;
         cursor: pointer;
         float: left;
@@ -19,8 +20,10 @@
         width: 210px;
         z-index: 1;
         img {
-          float: left;
-          position: absolute;
+            float: left;
+            min-height: 210px;
+            min-width: 210px;
+            position: absolute;
         }
     }
     img:hover {

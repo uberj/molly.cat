@@ -11,6 +11,7 @@ html, body {
 
 #wrap {
     @include box-shadow(0 1px 2px $light-gray);
+    background: url("/css/img/main-bg.png") repeat scroll 0 0 transparent;
     border-radius: 3px;
     margin: 0 auto;
     padding: 4px 3% 0;
@@ -175,9 +176,6 @@ code {
         border-radius: 8px;
         padding: 64px 16px 16px 16px;
         @include transition(background .4s);
-        &:hover, &.current-nav {
-            background: url("/css/img/textures/acccent.png") repeat scroll 0 0 transparent;
-        }
     }
     hr {
         clear: both;
@@ -257,7 +255,6 @@ a.btn {
 
  #footer {
     /* Overrides sticky-footer */
-    background: url("/css/img/textures/accent.png") repeat scroll 0 0 transparent;
     font-size: 14px;
     line-height: 28px;
     height: 115px;

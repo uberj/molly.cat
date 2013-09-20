@@ -9,7 +9,7 @@ html, body {
   -moz-box-shadow: 0 1px 2px #e1e1dc;
   -webkit-box-shadow: 0 1px 2px #e1e1dc;
   box-shadow: 0 1px 2px #e1e1dc;
-  background: url("../img/textures/main-bg.png") repeat scroll 0 0 transparent;
+  background: url("/img/textures/main-bg.png") repeat scroll 0 0 transparent;
   border-radius: 3px;
   margin: 0 auto;
   padding: 4px 3% 0;

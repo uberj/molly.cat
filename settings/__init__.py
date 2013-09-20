@@ -1,1 +1,0 @@
-from settings.local import *

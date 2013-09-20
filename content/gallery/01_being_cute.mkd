@@ -1,0 +1,11 @@
+title: "Being Cute"
+slug: beingCute
+category: gallery
+type: album
+source: flickr
+album-id: 72157635476328838
+
+datetime: 2013-09-11 00:00:01
+
+---
+
